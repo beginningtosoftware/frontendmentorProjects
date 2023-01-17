@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:ital,wght@0,500;1,700&display=swap');
+
+/* CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg,span {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Project CSS */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  display: grid;
+  place-items: center;
+  background-color: hsl(30, 38%, 92%);
+  color:hsl(228, 12%, 48%);
+  font-size: 0.875rem;
+}
+.project-wrap {
+  display: grid;
+  grid-template-columns: 240px  250px;
+  
+
+}
+.img-wrap img {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.text-wrap {
+  padding-left: 1.5rem;
+  background-color: white;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.text-wrap > span {
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+.text-wrap h1{
+  line-height: 1;
+  font-size: 1.7em;
+  font-family: "Fraunces", sans-serif;
+  color: black;
+  padding-top: 1rem;
+  width: 70%;
+}
+.text-wrap p {
+  font-size: 0.8rem;
+  padding-top: 1rem;
+  max-width: 95%;
+}
+div.price {
+  
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces", sans-serif;
+  display: flex;
+  align-self: center;
+ column-gap: 0.5rem;
+}
+div.price p:first-child {
+  font-size: 1.5rem;
+}
+div.price p:last-child{
+  color: hsl(228, 12%, 48%);
+  font-size: 0.7rem;
+  align-self: center;
+}
+button {
+  border:none;
+  width: 93%;
+  
+  background-color: hsl(158, 36%, 37%);
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  color: white;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 2.5rem;
+  column-gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+button span {
+  align-self: center;
+}
+button img {
+  width: 15px;
+  height: 15px;
+  align-self: center;
+}
+@media screen and (max-width: 527px){
+.project-wrap {
+  grid-template-columns: 1fr;
+  margin: 2rem 1rem;
+}
+}
