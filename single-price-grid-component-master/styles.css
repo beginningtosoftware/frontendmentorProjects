@@ -1,0 +1,145 @@
+/* CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg,span {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* Project CSS */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,700;1,400&display=swap');
+body {
+  background-color:  hsl(204, 43%, 93%);
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  
+}
+main{
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  
+}
+.project-wrap {
+  width: 46.4%;
+  background-color: white;
+  color: white;
+  border-radius: 0.5rem;
+}
+.upper-sec {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-bottom: 1.5rem;
+  padding: 2.5rem 2rem;
+}
+.upper-sec h1 {
+  color: hsl(179, 62%, 43%);
+  font-size: 1.5em;
+  padding: 0.5rem 0;
+}
+.upper-sec > p:nth-of-type(1) {
+  color: hsl(71, 73%, 54%);
+  padding: 0.4rem 0;
+  font-weight: 700;
+}
+.upper-sec > p:nth-of-type(2) {
+  color:hsl(212, 45%, 83%);
+  font-size: 0.875rem;
+  width: 90%;
+  font-weight: 700;
+}
+.lower-sec {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: linear-gradient(90deg, #2bb3b1 0%, #2bb3b1 50%, #4abebd 50%, #4abebd 100%);
+  padding: 2rem 2.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.lower-left-sec {
+  margin: 0.1rem;
+}
+.lower-left-sec > p{
+  font-size: 1rem;
+  font-weight: 700;
+}
+.price-sec {
+  display: flex;
+  align-content: center;
+  gap: 0.5rem;
+}
+.price-sec p:nth-of-type(2){
+  align-self: center;
+  font-size: 0.87rem;
+  font-weight: 700;
+  color: hsl(212, 45%, 83%);
+}
+.price{
+  font-size: 1.5rem;
+}
+.lower-left-sec > p:nth-of-type(2){
+  color: hsl(212, 45%, 83%);
+  font-size: 0.875rem;
+  padding-bottom: 2rem;
+}
+button {
+  width: 80%;
+  height: 3rem;
+  font-size: 1.1em;
+  font-weight: 700;
+  background-color:hsl(71, 73%, 54%);
+  border:none;
+  border-radius: 0.3rem;
+  color: white;
+}
+.lower-right-sec > ul {
+  list-style: none;
+  padding-left: 2.1rem;
+  font-size: 0.75rem;
+  color:hsl(212, 45%, 83%);
+  font-weight: 700;
+}
+.lower-right-sec p{
+  font-weight: 700;
+  padding-left: 2.1rem;
+  padding-bottom: 1rem;
+}
+@media screen and (max-width: 700px) {
+  .project-wrap {
+    width: 90%;
+    margin: 1rem auto;
+  }
+  .lower-left-sec {
+    padding-bottom: 2.5rem;
+  }
+  .lower-sec{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background: linear-gradient(to bottom, #2bb3b1 0%, #2bb3b1 50%, #4abebd 50%, #4abebd 100%);
+    padding: 2rem 2.5rem;
+  }
+  .lower-right-sec p {
+   padding: 0;
+   padding-bottom: 1rem;
+  }
+  .lower-right-sec ul {
+    padding: 0;
+  }
+}
