@@ -1,0 +1,140 @@
+/* CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg,span {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Project CSS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --pink: hsl(300, 69%, 71%);
+  --ff-poppins: 'Poppins', sans-serif;
+  --ff-open: 'Open Sans', sans-serif;
+  --fw-regular: 400;
+  --fw-bold: 600;
+}
+body {
+  background-image: url(images/bg-desktop.svg);
+  background-color: var(--violet);
+  color: white;
+  font-family: var(--ff-poppins);
+  font-weight: var(--fw-regular);
+}
+.project-wrap {
+  display: grid;
+  place-content: center;
+  margin: 2rem auto;
+}
+.logo-div {
+  margin-left: 7rem;
+  margin-bottom: 3rem;
+  max-width: 200px;
+}
+.container{
+  display: grid;
+  grid-template-columns: 43% 40%;
+  place-content: center;
+  margin: 2rem auto;
+  column-gap: 2rem;
+}
+.text-container {
+  width: 90%;
+}
+h1 {
+  font-size: 2.15rem;
+  
+  width: 80%;
+}
+.text-container > p {
+  margin: 1rem 0;
+  width: 80%;
+}
+button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+  color: var(--violet);
+  cursor: pointer;
+  font-family: var(--ff-open);
+}
+button:hover {
+  background-color: var(--pink);
+  
+}
+footer{
+  display: flex;
+  justify-content: flex-end;
+  max-width: 83%;
+  align-items: center;
+  column-gap: 1rem;
+  font-size: 1rem;
+}
+footer > span {
+  border: 2px solid white;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1rem;
+}
+footer > span:hover {
+  border: 2px solid #fe51c3;
+  color: #fe51c3;
+}
+@media screen and (max-width: 500px){
+  .container{
+    grid-template-columns: 1fr;
+    margin: 2rem;
+  }
+  .text-container {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .text-container > p {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+  }
+  button{
+    max-width: 200px;
+    width: 100%;
+    margin: 1rem auto;
+  }
+  footer {
+    justify-content: center;
+    width: 100%;
+    align-content: center;
+  }
+}
+
