@@ -110,6 +110,9 @@ footer > span:hover {
   color: #fe51c3;
 }
 @media screen and (max-width: 500px){
+   body{
+     background-image: url(images/bg-mobile.svg);
+  }
   .container{
     grid-template-columns: 1fr;
     margin: 2rem;
