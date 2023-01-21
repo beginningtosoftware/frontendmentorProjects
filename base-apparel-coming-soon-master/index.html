@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+ 
+</head>
+<body>
+  <main class="grid-container">
+    <div class="grid-col-1">
+      <img src="images/logo.svg" alt="logo">
+    </div>
+    <div class="grid-col-2">
+      <h1><span class="light">We're</span> <span>coming</span> <span>soon</span></h1>
+      <p>
+        Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+      <form id="form">
+        <div class="cont-email">
+        <input type="text" id="email" name="email" placeholder=" Email Address" />
+        <button id="button" type="button" ><img alt="arrow-img" src="images/icon-arrow.svg"></button>
+        </div>
+      </form>
+    </div>
+    <div class="grid-col-3">
+      <picture>
+        <source srcset="images/hero-desktop.jpg" alt="a model pic" media="(min-width: 701px)" />
+        <img src="images/hero-mobile.jpg" alt="a model pic">
+      </picture>
+    </div>
+  </main>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

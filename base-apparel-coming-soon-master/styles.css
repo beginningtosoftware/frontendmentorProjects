@@ -1,0 +1,149 @@
+/* CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Project CSS */
+:root{
+  --primary-red: hsl(0, 93%, 68%);
+  --pink: hsl(0, 36%, 70%);
+  --gray:  hsl(0, 6%, 24%);
+  --ff-sans: 'Josefin Sans', sans-serif;
+  --bg-clr: linear-gradient(135deg hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --gradient: linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 600;
+}
+body {
+  background-color: var(--bg-clr);
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-regular);
+}
+.grid-container {
+  display: grid;
+  place-items: center;
+  grid-template-rows: 20vh 1fr;
+  gap: 2rem;
+  background: var(--bg-clr);
+}
+.grid-col-1 {
+  width: 50%;
+}
+.grid-col-2{
+  display: inline-grid;
+  
+  align-self: start;
+  justify-items: center;
+  justify-self: center;
+}
+
+h1{
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  width: 50%;
+  color: var(--gray);
+  margin: 0 auto;
+  padding: 0;
+  line-height: 1.1;
+}
+.light {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  font-weight: var(--fw-light);
+  color: var(--pink)
+}
+.grid-col-2 p {
+  margin-top: 1rem;
+  width: 50%;
+  color: var(--pink);
+  margin-bottom: 1.5rem;
+}
+
+.grid-col-3 {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+form{
+  width: 50%;
+
+}
+.cont-email {
+  display: grid;
+  grid-template-columns: 85% 10%;
+  height: 50px;
+  
+}
+#email {
+ 
+ border: 1px solid hsl(0, 12.6%, 79.8%);
+ outline: none;
+ padding-left: 1rem;
+ border-radius: 25px;
+}
+#button {
+  display: grid;
+  place-items: center;
+  margin-left: -3.5rem;
+ background: linear-gradient(
+    90deg, var(--pink) , var(--primary-red)
+  );
+  border:none;
+  height: 55px;
+  border-radius: 25px;
+}
+@media screen and (max-width: 700px){
+  .grid-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 1fr;
+  }
+  .grid-col-3{
+   grid-column: 1;
+   grid-row: 2;
+   width: 100%;
+  }
+  .grid-col-3 img {
+    width: 100%;
+    object-fit: contain;
+  }
+  .grid-col-1{
+    margin-left: -6rem;
+  }
+  .grid-col-1 img {
+    width: 50%;
+  }
+  .grid-col-2 {
+    width: 100%;
+  }
+  h1 {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .grid-col-2 p {
+    width: 100%;
+    text-align: center;
+  }
+}
