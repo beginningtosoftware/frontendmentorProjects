@@ -1,0 +1,185 @@
+/* CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* Project CSS */
+:root {
+
+--gradient: linear-gradient( hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+--white: hsl(240, 78%, 98%);
+--gray: hsl(234, 14%, 74%);
+--blue: hsl(233, 13%, 49%);
+--dark-blue:  hsl(232, 13%, 33%);
+--ff-mont: 'Montserrat';
+--fw-regular: 400;
+--fw-bold: 700;
+
+}
+body {
+  font-family: var(--ff-mont);
+  font-weight: var(--fw-bold);
+  overflow-x: hidden;
+  background-color: whitesmoke;
+
+}
+.container {
+  text-align: center;
+  min-height: 100vh;
+  margin: 3rem auto;
+}
+.selection-container > p {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: var(--blue);
+}
+form {
+  color: var(--gray);
+}
+.sub-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  margin-top: 5rem;
+  max-width: 80%;
+  text-align: center;
+  justify-items: center;
+  
+}
+.col-1, .col-2, .col-3 {
+  background-color: white;
+  padding-top: 3rem;
+  height: 60vh;
+  width: 90%;
+  border-radius: 0.5rem;
+  color: var(--dark-blue)
+}
+.price {
+  font-size: 3rem;
+}
+ul.features {
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  line-height: 1.5;
+  color: var(--blue)
+}
+ul.features > li {
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+}
+li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  content:"";
+  border: 0.001cm solid whitesmoke;
+ margin-left: 2rem;
+ margin-right: 2rem;
+
+  
+}
+li:nth-last-of-type(1)::after {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  content:"";
+  border: 0.1px solid whitesmoke;
+ margin-left: 2rem;
+ margin-right: 2rem;
+}
+button{
+  margin: 1rem 2rem;
+  width: 85%;
+  height: 40px;
+  border: none;
+  border-radius: 0.3rem;
+  background: var(--gradient);
+  cursor: pointer;
+  color: white;
+}
+button:hover{
+  background: white;
+  color: var(--blue)
+}
+.col-1:hover, .col-2:hover, .col-3:hover {
+  background: var(--gradient);
+  margin-top: -2rem;
+}
+/* Slider CSS*/
+.switch {
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  gap: 3rem;
+  font-size: 1.5rem;
+  align-items: center;
+}
+input[type="checkbox"]{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  width: 60px;
+  height: 34px;
+  background: var(--gradient);
+  position: absolute;
+  border-radius: 30px;
+  
+}
+.slider::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  transition: 4ms ease-in-out;
+  border-radius: 30px;
+  cursor: pointer;
+}
+input:checked + .slider {
+  background: #ccc;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #ccc;
+}
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+@media screen and (max-width: 824px){
+  .sub-grid-container{
+    grid-template-columns: 1fr;
+  }
+  
+}
+@media screen and (max-width: 350px){
+  .switch {
+    flex-direction: column;
+  }
+}
